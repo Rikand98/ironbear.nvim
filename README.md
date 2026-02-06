@@ -1,13 +1,10 @@
-# 🐼`bear.nvim`🐻‍❄️
+# 🐼`ironbear.nvim`🐻‍❄️
 
-A neovim plugin for debugging `pandas` and `polars` DataFrames.
-
-https://github.com/user-attachments/assets/55e22539-9938-4b48-9ec5-b1b6a43b976b
-
+A neovim plugin for debugging `pandas` and `polars` DataFrames, based on [bear.nvim](https://github.com/nelnn/bear.nvim).
 
 ## ⚡️ Requirements
 
-- [nvim-dap](https://github.com/mfussenegger/nvim-dap)
+- [iron.nvim](https://github.com/Vigemus/iron.nvim)
 - [visidata](https://www.visidata.org/install/) installed globally
 - [polars](https://github.com/pola-rs/polars) and/or
   [pandas](https://github.com/pandas-dev/pandas) installed in your virtual
@@ -19,7 +16,7 @@ https://github.com/user-attachments/assets/55e22539-9938-4b48-9ec5-b1b6a43b976b
 
 ```lua
 {
-  "nelnn/bear.nvim",
+  "rikand98/ironbear.nvim",
   dependencies = {
     "mfussenegger/nvim-dap",
   },
@@ -32,12 +29,12 @@ https://github.com/user-attachments/assets/55e22539-9938-4b48-9ec5-b1b6a43b976b
 
 ```lua
 {
-  "nelnn/bear.nvim",
+  "rikand98/ironbear.nvim",
   dependencies = {
-    "mfussenegger/nvim-dap",
+    "Vigemus/iron.nvim",
   },
   opts = {
-      cache_dir = "~/.cache/nvim/bear",
+      cache_dir = "~/.cache/nvim/ironbear",
       file_name = "tmp_" .. os.date("%m%d_%H%M%S") .. ".csv",
       remove_file = true, -- remove file upon quitting visidata
       window = {
@@ -46,14 +43,14 @@ https://github.com/user-attachments/assets/55e22539-9938-4b48-9ec5-b1b6a43b976b
         border = "rounded"
       },
       keymap = {
-        visualise = "<leader>df",
-        visualise_buf = "<leader>bdf",
+        visualise = "<leader>dff",
+        visualise_buf = "<leader>dff",
         exit_terminal_mode = "<C-o>",
       }
   },
 
   config = function(_, opts)
-    local df_visidata = require("bear")
+    local df_visidata = require("ironbear")
     df_visidata.setup(opts)
   end,
 
@@ -64,13 +61,12 @@ https://github.com/user-attachments/assets/55e22539-9938-4b48-9ec5-b1b6a43b976b
 </details>
 
 ## 🚀 Usage (with default keymaps)
-- `<leader>df`/`<leader>dfb` to view the dataframe under the cursor.
-- `<leader>df`/`<leader>dfb` in the repl session and input the dataframe variable.
+- `<leader>dff`/`<leader>dfb` to view the dataframe under the cursor.
+- `<leader>dff`/`<leader>dfb` in the repl session and input the dataframe variable.
 - `<C-o>` to exit from terminal to normal mode and `i` to enter. This is useful
   when you want to change buffers.
 - `q` to close floating window or buffer in normal and terminal mode.
 
-You can see my debugging setup [here](https://github.com/nelnn/dotfiles/blob/main/.config/nvim/lua/plugins/debugging.lua).
 
 ## ⌘ Commands
 | Command | Action |
@@ -81,4 +77,4 @@ You can see my debugging setup [here](https://github.com/nelnn/dotfiles/blob/mai
 
 
 > [!NOTE]
-> I am not knowledgeable in lua. PRs for code refactor and new features are more than welcome.
+> This is a modified package of [bear.nvim](https://github.com/nelnn/bear.nvim) that uses iron.nvim instead of nvim-dap.
