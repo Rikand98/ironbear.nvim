@@ -1,4 +1,4 @@
-# 🐼`ironbear.nvim`🐻‍❄️
+# ⚙️🐼`ironbear.nvim`🐻‍❄️ ⚙️
 
 A neovim plugin for debugging `pandas` and `polars` DataFrames, based on [bear.nvim](https://github.com/nelnn/bear.nvim).
 
@@ -18,7 +18,7 @@ A neovim plugin for debugging `pandas` and `polars` DataFrames, based on [bear.n
 {
   "rikand98/ironbear.nvim",
   dependencies = {
-    "mfussenegger/nvim-dap",
+    "Vigemus/iron.nvim",
   },
 }
 ```
