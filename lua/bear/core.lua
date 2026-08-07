@@ -30,7 +30,7 @@ local function save_dataframe_py_expr(df_var, path)
 
           df_var = eval(var_name)
 
-          if pandas_imported and isinstance(df_var, pd.DataFrame):
+          if pandas_imported and isinstance(df_var, (pd.DataFrame, pd.Series)):
               df_var.to_csv(file_path, index=True)
           elif polars_imported and isinstance(df_var, pl.DataFrame):
               df_var.write_csv(file_path)

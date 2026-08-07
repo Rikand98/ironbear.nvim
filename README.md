@@ -1,6 +1,6 @@
 # 🐼`bear.nvim`🐻‍❄️
 
-A neovim plugin for debugging `pandas` and `polars` DataFrames.
+A neovim plugin for debugging `pandas` and `polars` `DataFrames`/`Series`.
 
 https://github.com/user-attachments/assets/55e22539-9938-4b48-9ec5-b1b6a43b976b
 
@@ -64,8 +64,8 @@ https://github.com/user-attachments/assets/55e22539-9938-4b48-9ec5-b1b6a43b976b
 </details>
 
 ## 🚀 Usage (with default keymaps)
-- `<leader>df`/`<leader>dfb` to view the dataframe under the cursor or the visual selection.
-- `<leader>df`/`<leader>dfb` in the repl session and input the dataframe variable.
+- `<leader>df`/`<leader>dfb` to view the `DataFrame`/`pd.Series` under the cursor or the visual selection.
+- `<leader>df`/`<leader>dfb` in the repl session and input the `DataFrame`/`Series` variable.
 - `<C-o>` to exit from terminal to normal mode and `i` to enter. This is useful
   when you want to change buffers.
 - `q` to close floating window or buffer in normal and terminal mode.
@@ -75,8 +75,8 @@ You can see my debugging setup [here](https://github.com/nelnn/dotfiles/blob/mai
 ## ⌘ Commands
 | Command | Action |
 | ------------- | -------------- |
-| DFView | View dataframe in a floating window|
-| DFViewBuf | View dataframe in a new buffer|
+| DFView | View `DataFrame`/`Series` in a floating window|
+| DFViewBuf | View `DataFrame`/`Series` in a new buffer|
 | DFClean | Clear cache directory|
 
 
